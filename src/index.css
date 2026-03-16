@@ -1,0 +1,51 @@
+body {
+  background: #e9ecef;
+}
+
+.app-container {
+  max-width: 420px;   /* typical mobile width */
+  min-height: 100vh;
+  margin: auto;
+  background: white;
+  border: 1px solid #ccc;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.clickable-icon{
+  color: #199a8e;
+}
+
+.btn-white {
+  background-color: #fff !important;
+  color: #000 !important; 
+  border-color: #d5d4d4 !important; 
+}
+
+.btn-white:hover {
+  background-color: #e6e6e6 !important; 
+  border-color: #adadad !important;
+}
+
+.dropdown{
+  color: #199a8e;
+  transition: transform 0.2s ease;
+}
+
+[data-open] .dropdown{
+  transform: rotate(180deg);
+}
+
+.important{
+  background-color: #199a8e;
+  color: white;
+}
+
+#back-button:hover{
+  cursor: pointer;
+}
+
+.links{
+  color: 'inherit';
+  display: 'contents';
+  text-decoration: none; 
+}
