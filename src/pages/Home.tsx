@@ -39,7 +39,8 @@ function Column({icon}: {icon: any}){
 
 export default function Home() {
   return (
-    <Layout page="Home" tooltip="Find all your information here. Return to this page at any time using the House icon in the bottom bar.">
+    <Layout page="Home" tooltip="Your main hub. Includes info about your medicine, doctors, physical therapy suggestions, a personalized plan for the best recovery, actions to avoid, and common
+                                  side effects.">
       <div className='flex-grow-1 d-flex flex-column text-center gap-3 justify-content-center'>
         <div className='row flex-grow-1 mx-2' style={{maxHeight: '20vh', maxWidth:'60vh'}}>
           <Column icon={<Icon icon="bi bi-prescription2 clickable-icon " label="Medication" active={true} to="/Medication" important={true}/>}/>
