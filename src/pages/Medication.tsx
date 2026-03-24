@@ -41,7 +41,7 @@ export default function Medication() {
       </div>
       <ClickLabel name="Medication 2" description="Medicine lasts for 2 more weeks. Remember to take one in the morning with food!" refill={false}/>
       <ClickLabel name="Medication 3" description="Medicine lasts for 2 more weeks. Remember to take one at night with food!" refill={false}/>
-      <div className='important px-3 fs-4'>
+      <div className='important px-3 fs-3'>
           <span className='m-3'>Past Medications</span>
       </div>
       <ClickLabel name="Medication 4" description="Medicine was prescribed for an ear infection on 2/13/26 and finished 2/20/26." refill={false}/>
