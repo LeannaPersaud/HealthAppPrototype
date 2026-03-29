@@ -155,8 +155,7 @@ export default function Schedule({contrast, toggleContrast}:{contrast:boolean, t
             {stage==8 && (<>
                 <Title title="Success!" icon="bi bi-check-square-fill d-block"/>
                 <div className="container-fluid d-flex align-items-center justify-content-center text-center fs-3 py-5">
-                    <p>You have successfully scheduled your refill. Please be sure to pick it up at {pharmacy} on {date} at {time}.
-                    </p>
+                    <p>You have successfully scheduled your refill. Please be sure to pick it up at {pharmacy} on {date} at {time}.</p>
                 </div>
             </>)}
         </Layout>
