@@ -146,6 +146,18 @@ body {
   background-color: #138a7a !important; 
 }
 
+.success-clicked{
+  background-color: #094f39 !important; 
+  color: white !important;
+  cursor: default !important;
+}
+
+.danger-clicked{
+  background-color: #721b24 !important;
+  color: white !important;
+  cursor: default !important;
+}
+
 .btn-success:hover{
   background-color: #137858 !important; 
 }
