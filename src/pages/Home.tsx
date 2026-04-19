@@ -6,7 +6,7 @@ function Icon({icon, label, active, to, important}: {icon: string, label: string
   return(
     <div className='h-100 d-flex'>
     { active ? 
-      (<Link to={to} className='d-flex w-100 h-100 links'><button type="button" className='btn btn-white p-2 h-100 w-100'>
+      (<Link to={to} className='d-flex w-100 h-100 links'><button type="button" className='btn btn-white p-2 h-100 w-100 card-border'>
         <div className='position-relative'>
           <i className={icon} style={{fontSize: "clamp(2.5rem, 3.5vw, 3.5rem)"}}></i> 
           {important && <>
@@ -20,11 +20,11 @@ function Icon({icon, label, active, to, important}: {icon: string, label: string
       )
       :
       (
-      <button type="button" className={'btn btn-white p-2 h-100 w-100 no-hover'} disabled>
+      <button type="button" className={'btn btn-white p-2 h-100 w-100 no-hover card-border'} disabled>
         <div className='position-relative'>
           <i className={icon} style={{fontSize: "clamp(2.5rem, 3.5vw, 3.5rem)"}}></i> 
         </div>
-        <div>{label} <br/>(Coming Soon)</div>
+        <div>{label} <br/><small>(Coming Soon)</small></div>
       </button>
     )} 
     </div>
@@ -43,19 +43,20 @@ export default function Home({contrast, toggleContrast}:{contrast:boolean, toggl
   return (
     <Layout page="Home" tooltip="Your main hub. Includes info about your medicine, doctors, physical therapy suggestions, a personalized plan for the best recovery, actions to avoid, and common side effects."
             current={1} contrast={contrast} toggleContrast={toggleContrast}>
-      <div className='flex-grow-1 d-flex flex-column text-center gap-3 justify-content-center'>
+      <div className='flex-grow-1 d-flex flex-column text-center gap-3 justify-content-center py-2'>
         <div className='row flex-grow-1 mx-2' style={{maxHeight: '20vh', maxWidth:'60vh'}}>
           <Column icon={<Icon icon="bi bi-prescription2 clickable-icon " label="Medication" active={true} to="/Medication" important={true}/>}/>
-          <Column icon={<Icon icon="bi bi-hospital clickable-icon " label="Doctors" active={false} to="" important={false}/>}/>
+          <Column icon={<Icon icon="bi bi-clipboard2-check-fill clickable-icon " label="Recovery Dos and Don'ts" active={true} to="/DoandDont" important={false}/>}/>
         </div>
-
+      </div>
+      <div className='flex-grow-1 d-flex flex-column text-center gap-3 justify-content-center my-2'>
         <div className='row flex-grow-1 mx-2' style={{maxHeight: '20vh', maxWidth:'60vh'}}>
           <Column icon={<Icon icon="bi bi-person-walking clickable-icon " label="Physical Therapy" active={false} to="" important={false}/>}/>
           <Column icon={<Icon icon="bi bi-journal-medical clickable-icon " label="Wellness Plan" active={false} to="" important={false}/>}/>
         </div>
 
         <div className='row flex-grow-1 mx-2' style={{maxHeight: '20vh', maxWidth:'60vh'}}>
-          <Column icon={<Icon icon="bi bi-clipboard2-check-fill clickable-icon " label="Recovery Dos and Don'ts" active={true} to="/DoandDont" important={false}/>}/>
+          <Column icon={<Icon icon="bi bi-hospital clickable-icon " label="Doctors" active={false} to="" important={false}/>}/>
           <Column icon={<Icon icon="bi bi-virus2 clickable-icon " label="Common Side Effects" active={false} to="" important={false}/>}/>
         </div>
       </div>

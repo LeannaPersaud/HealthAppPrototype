@@ -1,17 +1,25 @@
 :root{
   --theme-color: #199a8e;
+  --light-color: #d6f1ee;
+  --button-color: #2a8894;
 }
 
 .contrast{
   --theme-color: black;
+  --light-color: rgb(199, 196, 196);
+  --button-color: rgb(107, 107, 107);
 }
 
 body {
   background: #e9ecef;
 }
 
+.light-bg{
+  background-color: var(--light-color);
+}
+
 .app-container {
-  max-width: 420px;   /* typical mobile width */
+  max-width: 420px;
   min-height: 100vh;
   margin: auto;
   background: white;
@@ -44,7 +52,7 @@ body {
 }
 
 .important{
-  background-color: var(--theme-color);
+  background-color: var(--button-color);
   color: white;
 }
 
@@ -89,7 +97,7 @@ body {
 
 .segment{
   min-width: 10px;
-  height: 10px;
+  height: 12px;
   border-radius: 10px;
   background-color: #a3a3a3;
   flex: 1
@@ -97,6 +105,16 @@ body {
 
 .segment.done{
   background-color: var(--theme-color);
+}
+
+.segment.current{
+  background: repeating-linear-gradient(
+  45deg,
+  var(--theme-color),
+  var(--theme-color) 10px,
+  var(--light-color) 10px,
+  var(--light-color) 20px
+);
 }
 
 .fc {
@@ -109,6 +127,52 @@ body {
 }
 
 .fc .fc-button-primary {
-  background-color: var(--theme-color);
+  background-color: var(--button-color);
   color: white;
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active,
+.fc .fc-button-primary:not(:disabled):active {
+    background-color: var(--light-color) !important;
+    color: black!important;
+}
+
+.btn:disabled, .btn.disabled {
+    opacity: 0.6 !important;
+    pointer-events: none;
+}
+
+.btn-success{
+  background-color: #138a7a !important; 
+}
+
+.btn-success:hover{
+  background-color: #137858 !important; 
+}
+
+.card-border{
+  border-style: none !important;
+  box-shadow: 0 3px 5px 1px rgba(138, 135, 135, 0.705) !important;
+}
+
+.card-border-red{
+  border-style: none !important;
+  box-shadow: 0 3px 5px 1px #9e083c !important;
+  max-width: 400px;
+  width: 400px;
+}
+
+.card-border-active{
+  border-style: none !important;
+  box-shadow: 0 3px 5px 1px var(--theme-color) !important;
+  max-width: 400px;
+  width: 400px;
+}
+
+.card-border-past{
+  border-style: none !important;
+  box-shadow: 0 3px 5px 1px #b8b8b8 !important;
+  background-color: rgb(219, 217, 217) !important;
+  max-width: 400px;
+  width: 400px;
 }

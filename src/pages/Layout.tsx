@@ -51,22 +51,19 @@ function Navigation({current}:{current:number}){
                         <div>Profile</div>
                     </button>
                 </div>
-                <div className="col-3 d-flex justify-content-center align-items-center"
-                 style={{backgroundColor: current==1 ? '#d6f1ee' : 'white'}}>
+                <div className={`col-3 d-flex justify-content-center align-items-center ${current==1 ? 'light-bg' : ''}`}>
                     <Link to="/"><button type="button" className="btn border-0 lh-sm">
                         <i className="bi bi-house-door-fill clickable-icon fs-1"></i>
                         <div>Home</div>
                     </button></Link>
                 </div>
-                <div className="col-3 d-flex justify-content-center align-items-center"
-                 style={{backgroundColor: current==2 ? '#d6f1ee' : 'white'}}>
+                <div className={`col-3 d-flex justify-content-center align-items-center ${current==2 ? 'light-bg' : ''}`}>
                     <Link to="/DoandDont"><button type="button" className="btn border-0 lh-sm">
                         <i className="bi bi-clipboard2-fill clickable-icon fs-1"></i>
                         <div>Do's/Don'ts</div>
                     </button></Link>
                 </div>
-                <div className="col-3 d-flex justify-content-center align-items-center"
-                 style={{backgroundColor: current==3 ? '#d6f1ee' : 'white'}}>
+                <div className={`col-3 d-flex justify-content-center align-items-center ${current==3 ? 'light-bg' : ''}`}>
                     <Link to="/Calendar"><button type="button" className="btn border-0 lh-sm">
                         <i className="bi bi-calendar-event-fill clickable-icon fs-1"></i>
                         <div>Calendar</div>
